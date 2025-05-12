@@ -49,20 +49,5 @@ else:
         return jsonify({"status": "error", "message": "Backend initialization failed: Model could not be loaded."}), 500
 
 
-# The 'app' variable is now the Flask application instance
-# Gunicorn (or other WSGI servers) will look for this 'app' object
-# to handle incoming requests.
-
-# You might optionally add a simple health check route here if not
-# already covered by your model's create_api (though create_api creates the Flask app itself)
-# @app.route('/healthz')
-# def health_check():
-#     # You might want to check if the model instance is successfully loaded
-#     status = "ok" if loaded_model_instance else "model_load_failed"
-#     return jsonify({"status": status}), 200
-
-
-# If you were using a different structure where app is created directly
-# at the module level, you might just have:
-# from sleep_model_v2 import app as application # assuming app is global in sleep_model_v2
+#
 

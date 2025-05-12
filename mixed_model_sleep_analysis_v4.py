@@ -977,5 +977,20 @@ def main(data_file_path="synthetic_sleep_enhanced_v3.csv"):
     except Exception as e:
         logger.error(f"An unexpected error occurred in main workflow: {str(e)}", exc_info=True)
 
+
 if __name__ == "__main__":
     main()
+
+# --- Flask App Exposure for Render ---
+try:
+    model = SleepQualityModel.load_model(file_path="sleep_model_bundle_v2.pkl")
+    app = model.create_api()
+except Exception as e:
+    import logging
+    from flask import Flask, jsonify
+    logging.error(f"Failed to load model or create API: {e}", exc_info=True)
+    app = Flask(__name__)
+
+    @app.route("/")
+    def fallback_route():
+        return jsonify({"error": "Failed to initialize model.", "details": str(e)})
