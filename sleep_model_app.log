@@ -1,0 +1,40 @@
+2025-05-13 00:00:53 - INFO - root - setup_logging - Logging configured.
+2025-05-13 00:00:53 - INFO - __main__ - <module> - Attempting to load model from: sleep_model_bundle_v2.pkl
+2025-05-13 00:00:53 - INFO - SleepQualityModel.load_model - load_model - Loading model bundle from sleep_model_bundle_v2.pkl...
+2025-05-13 00:00:53 - INFO - SleepQualityModel.load_model - load_model - Model bundle loaded successfully from sleep_model_bundle_v2.pkl
+2025-05-13 00:00:53 - INFO - __main__ - <module> - Sleep quality model loaded successfully.
+2025-05-13 00:00:53 - INFO - __main__ - <module> - Flask app created and CORS enabled for /predict.
+2025-05-13 00:00:53 - INFO - __main__ - <module> - Starting Flask development server...
+2025-05-13 00:01:02 - INFO - root - setup_logging - Logging configured.
+2025-05-13 00:01:02 - INFO - __main__ - <module> - Attempting to load model from: sleep_model_bundle_v2.pkl
+2025-05-13 00:01:02 - INFO - SleepQualityModel.load_model - load_model - Loading model bundle from sleep_model_bundle_v2.pkl...
+2025-05-13 00:01:02 - INFO - SleepQualityModel.load_model - load_model - Model bundle loaded successfully from sleep_model_bundle_v2.pkl
+2025-05-13 00:01:02 - INFO - __main__ - <module> - Sleep quality model loaded successfully.
+2025-05-13 00:01:02 - INFO - __main__ - <module> - Flask app created and CORS enabled for /predict.
+2025-05-13 00:01:02 - INFO - __main__ - <module> - Starting Flask development server...
+2025-05-13 00:01:25 - INFO - root - setup_logging - Logging configured.
+2025-05-13 00:01:25 - INFO - __main__ - <module> - Attempting to load model from: sleep_model_bundle_v2.pkl
+2025-05-13 00:01:25 - INFO - SleepQualityModel.load_model - load_model - Loading model bundle from sleep_model_bundle_v2.pkl...
+2025-05-13 00:01:25 - INFO - SleepQualityModel.load_model - load_model - Model bundle loaded successfully from sleep_model_bundle_v2.pkl
+2025-05-13 00:01:25 - INFO - __main__ - <module> - Sleep quality model loaded successfully.
+2025-05-13 00:01:25 - INFO - __main__ - <module> - Flask app created and CORS enabled for /predict.
+2025-05-13 00:01:25 - INFO - __main__ - <module> - Starting Flask development server...
+2025-05-13 00:02:21 - INFO - __main__.predict_route - predict_route - Received request on /predict
+2025-05-13 00:02:21 - INFO - __main__.predict_route - predict_route - Processing prediction for User: User_1, Model Type Pref: random_forest
+2025-05-13 00:02:21 - INFO - SleepQualityModel - predict_sleep_quality - Received prediction request. Model type: random_forest, User ID: User_1
+2025-05-13 00:02:21 - INFO - SleepQualityModel - preprocess_data - Starting data preprocessing... Is training data: False
+2025-05-13 00:02:21 - INFO - SleepQualityModel - preprocess_data - Data transformed using pre-fitted scaler for features: ['ScreenTime', 'StressLevel', 'DietScore', 'CircadianStability', 'PhysicalActivity', 'CaffeineIntake', 'BedroomNoise', 'BedroomLight', 'EveningAlcohol', 'ExerciseFrequency', 'SocialJetlag', 'MindfulnessPractice', 'AvgHRV', 'DeepSleepProportion', 'StepsToday', 'RestingHR']
+2025-05-13 00:02:21 - INFO - SleepQualityModel - preprocess_data - Preprocessing completed. Processed data shape: (1, 17)
+2025-05-13 00:02:21 - INFO - SleepQualityModel - predict_sleep_quality - Using user-specific model: User_1_random_forest
+2025-05-13 00:02:21 - INFO - SleepQualityModel - predict_sleep_quality - Prediction successful using user-specific: User_1_random_forest.
+2025-05-13 00:02:21 - INFO - __main__.predict_route - predict_route - Prediction successful: 5.163999999999999
+2025-05-13 00:02:21 - INFO - SleepQualityModel - interpret_model - Received interpretation request. Model type: random_forest, User ID: User_1
+2025-05-13 00:02:21 - INFO - SleepQualityModel - preprocess_data - Starting data preprocessing... Is training data: False
+2025-05-13 00:02:21 - INFO - SleepQualityModel - preprocess_data - Data transformed using pre-fitted scaler for features: ['ScreenTime', 'StressLevel', 'DietScore', 'CircadianStability', 'PhysicalActivity', 'CaffeineIntake', 'BedroomNoise', 'BedroomLight', 'EveningAlcohol', 'ExerciseFrequency', 'SocialJetlag', 'MindfulnessPractice', 'AvgHRV', 'DeepSleepProportion', 'StepsToday', 'RestingHR']
+2025-05-13 00:02:21 - INFO - SleepQualityModel - preprocess_data - Preprocessing completed. Processed data shape: (1, 17)
+2025-05-13 00:02:21 - INFO - SleepQualityModel - interpret_model - Using user-specific model for interpretation: User_1_random_forest
+2025-05-13 00:02:21 - INFO - SleepQualityModel - interpret_model - Interpreting model user-specific: User_1_random_forest using SHAP and LIME.
+2025-05-13 00:02:21 - INFO - SleepQualityModel - interpret_model - SHAP explanation generated successfully.
+2025-05-13 00:02:21 - INFO - SleepQualityModel - interpret_model - LIME explanation generated successfully (R2=0.124).
+2025-05-13 00:02:21 - INFO - __main__.predict_route - predict_route - Interpretation successful.
+2025-05-13 00:02:21 - INFO - __main__.predict_route - predict_route - Meaningful response generated.
