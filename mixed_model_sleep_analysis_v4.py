@@ -991,7 +991,7 @@ except Exception as e:
     from flask import Flask, jsonify
     logging.error(f"Failed to load model or create API: {e}", exc_info=True)
     app = Flask(__name__)
-    CORS(app)
+    CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins (for testing)
 
     @app.route("/")
     def fallback_route():
