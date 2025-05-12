@@ -700,7 +700,7 @@ class SleepQualityModel:
         # This is a common pattern but be mindful of state if app scales
         app.config['SLEEP_MODEL_INSTANCE'] = self
 
-        @app.route("/predict", methods=["POST"])
+        @app.route("/predict", methods=["POST", "OPTIONS"])
         def predict_route():
             model_instance = app.config['SLEEP_MODEL_INSTANCE']
             try:
