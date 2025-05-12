@@ -1,0 +1,20 @@
+# Ignore virtual environments
+venv/
+
+# Ignore Python cache directories
+__pycache__/
+*.pyc
+
+# Ignore joblib model file (if you don't want to commit large models)
+# You MIGHT want to commit the .pkl file if it's relatively small
+# and you want it deployed easily. Uncomment the line below if you
+# prefer NOT to track the model file itself in Git.
+# sleep_model_bundle_v2.pkl
+
+# Ignore synthetic data file (if you generate it and don't want to commit it)
+synthetic_sleep_enhanced_v3.csv
+
+# Ignore editor/IDE specific files (optional, but good practice)
+.vscode/
+.idea/
+*.swp
