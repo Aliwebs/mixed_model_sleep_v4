@@ -16,6 +16,7 @@ import joblib
 import logging
 from datetime import datetime, timedelta
 from flask import Flask, request, jsonify
+from flask_cors import CORS 
 
 # Configure logging
 logging.basicConfig(
@@ -990,6 +991,7 @@ except Exception as e:
     from flask import Flask, jsonify
     logging.error(f"Failed to load model or create API: {e}", exc_info=True)
     app = Flask(__name__)
+    CORS(app)
 
     @app.route("/")
     def fallback_route():
